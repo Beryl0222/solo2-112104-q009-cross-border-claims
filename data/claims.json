@@ -1,0 +1,26 @@
+[
+  {
+    "id": "claim-1",
+    "kind": "driver_note",
+    "lang": "zh",
+    "text": "18:40 放在东仓暂存区，值班员未签收。"
+  },
+  {
+    "id": "claim-2",
+    "kind": "carrier_message",
+    "lang": "en",
+    "text": "Manifest shows handover at East Depot, not proof of delivery to consignee."
+  },
+  {
+    "id": "claim-3",
+    "kind": "scan_correction",
+    "lang": "en",
+    "text": "Corrected scan: transfer recorded at 19:05; prior 18:05 event belonged to parcel ZX-4021."
+  },
+  {
+    "id": "claim-4",
+    "kind": "recipient_email",
+    "lang": "zh",
+    "text": "邮件称货物未到，猜测司机漏送；尚无开箱或卸货记录。"
+  }
+]
