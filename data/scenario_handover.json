@@ -1,0 +1,85 @@
+{
+  "shipments": {
+    "SHP-2026-0417": [
+      {
+        "id": "src-0417-driver",
+        "kind": "driver_note",
+        "lang": "zh",
+        "author": "司机 林某",
+        "author_role": "driver",
+        "received_at": "2026-11-02T09:30:00+08:00",
+        "text": "11月1日 18:40 放在东仓暂存区，值班员未签收。"
+      },
+      {
+        "id": "src-0417-carrier",
+        "kind": "carrier_message",
+        "lang": "en",
+        "author": "East Line Carriers",
+        "author_role": "carrier",
+        "received_at": "2026-11-02T11:00:00+08:00",
+        "location": "East Depot",
+        "text": "Manifest shows handover at East Depot, not proof of delivery to consignee."
+      },
+      {
+        "id": "src-0417-recipient",
+        "kind": "recipient_email",
+        "lang": "zh",
+        "author": "收货方 王某",
+        "author_role": "recipient",
+        "received_at": "2026-11-03T08:15:00+08:00",
+        "text": "邮件称货物未到，猜测司机漏送；尚无开箱或卸货记录。"
+      },
+      {
+        "id": "src-0417-mapping",
+        "kind": "carrier_mapping",
+        "lang": "en",
+        "author": "East Line Carriers",
+        "author_role": "carrier",
+        "received_at": "2026-11-04T09:30:00+08:00",
+        "text": "Renumber notice: SHP-2026-0417-R replaced by SHP-2026-0417; scan history retained."
+      },
+      {
+        "id": "src-0417-scan-correction",
+        "kind": "scan_correction",
+        "lang": "en",
+        "author": "carrier scan system",
+        "author_role": "system",
+        "received_at": "2026-11-04T10:00:00+08:00",
+        "corrects": ["src-0417-scan-old"],
+        "reassigns_to": "ZX-4021",
+        "cross_references": ["ZX-4021"],
+        "text": "Corrected scan: transfer recorded at 19:05; prior 18:05 event belonged to parcel ZX-4021."
+      }
+    ],
+    "SHP-2026-0417-R": [
+      {
+        "id": "src-0417-scan-old",
+        "kind": "scan",
+        "lang": "en",
+        "author": "carrier scan system",
+        "author_role": "system",
+        "received_at": "2026-11-01T20:30:00+08:00",
+        "observed_at": "2026-11-01T18:05:00+08:00",
+        "text": "Scan: transfer recorded at 18:05, East Depot."
+      }
+    ]
+  },
+  "links": [
+    {
+      "old_id": "SHP-2026-0417-R",
+      "new_id": "SHP-2026-0417",
+      "evidence_ids": ["src-0417-mapping"],
+      "rationale": "承运商重编号通知同时列出旧号与新号",
+      "created_by": "handler-a"
+    }
+  ],
+  "pending": [
+    {
+      "shipment_id": "SHP-2026-0417",
+      "question": "东仓交接后是否有签收或出库扫描？",
+      "target_party": "carrier",
+      "created_by": "handler-a",
+      "evidence_ids": ["src-0417-driver", "src-0417-carrier"]
+    }
+  ]
+}
